@@ -12,10 +12,10 @@ import (
 )
 
 func main() {
-	redisSentinelTest()
+	TestRedisSentinel()
 }
 
-func redisSentinelTest() {
+func TestRedisSentinel() {
 	sentinels := redis.NewFailoverClient(&redis.FailoverOptions{
 		MasterName: "mymaster",
 		SentinelAddrs: []string{
